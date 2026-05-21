@@ -443,7 +443,7 @@ color:#555;
           <span class="read-more">قراءة المزيد...</span>
         </div>
         <div class="timeline-img">
-          <img src="images\pic01.jpg" alt="حدث ٢٠٢٥">
+          <img src="images/pic01.jpg" alt="حدث ٢٠٢٥">
         </div>
       </div>
 
@@ -455,7 +455,7 @@ color:#555;
           <span class="read-more">قراءة المزيد...</span>
         </div>
         <div class="timeline-img">
-          <img src="images\pic02.jpg" alt="حدث ٢٠٢٥">
+          <img src="images/pic01.jpg" alt="حدث ٢٠٢٥">
         </div>
       </div>
 
@@ -467,8 +467,7 @@ color:#555;
           <span class="read-more">قراءة المزيد...</span>
         </div>
         <div class="timeline-img">
-          <img src="images\pic03.jpg" alt="حدث ٢٠٢٥">
-         
+          <img src="images/pic01.jpg" alt="حدث ٢٠٢٥">
         </div>
       </div>
 
@@ -513,11 +512,9 @@ color:#555;
         <h3>التوريدات العمومية للمشاريع</h3>
         <p>متخصصون في تأمين كافة الاحتياجات اللوجستية والمواد الخام لشركات المقاولات والمشاريع الإنشائية بعقود مرنة.</p>
       </div>
-      
     </div>
   </section>
 
-  
   <section class="contact-section" id="contact">
     <div class="contact-title">تواصل معنا</div>
     <div class="contact-sub">نحن هنا للإجابة على جميع استفساراتكم</div>
@@ -542,49 +539,41 @@ color:#555;
             <div class="contact-info-icon">📞</div>
             <div class="contact-info-text">
               <strong>الهاتف</strong>
-              <span><a href="tel:+201222686337" style="text-decoration: none; color: inherit;">
-         +201222686337
-      </a></span>
+              <span><a href="tel:+201222686337" style="text-decoration: none; color: inherit;">+201222686337</a></span>
             </div>
           </div>
           <div class="contact-info-item">
             <div class="contact-info-icon">✉️</div>
             <div class="contact-info-text">
-          <div>
-   <strong>البريد الإلكتروني</strong>
-   <span>
-      <a href="mailto:ahmed.gaber.560000@gmail.com" style="text-decoration: none; color: inherit;">
-         ahmed.gaber.560000@gmail.com
-      </a>
-   </span>
-</div>
+              <strong>البريد الإلكتروني</strong>
+              <span><a href="mailto:ahmed.gaber.560000@gmail.com" style="text-decoration: none; color: inherit;">ahmed.gaber.560000@gmail.com</a></span>
+            </div>
           </div>
         </div>
         <div class="map-placeholder">
-          <span><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3487.224069930215!2d31.109681699999996!3d29.069523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145a27a2deac27ad%3A0xec915575ea37c11e!2z2KjYsdisINix2YjZitin2YQg2YXZg9mH!5e0!3m2!1sar!2seg!4v1779193410583!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span>
-        </div>
-        <div class="working-hours">
-      
+          <span><iframe src="https://maps.google.com/maps?q=بنى%20سويف%20ابراج%20مكة&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span>
         </div>
       </div>
       <div>
-        <div class="contact-form">
-          <input type="text" class="form-field" placeholder="الاسم الكامل">
-          <input type="email" class="form-field" placeholder="البريد الإلكتروني">
-          <input type="tel" class="form-field" placeholder="رقم الهاتف">
-          <textarea class="form-field" placeholder="اكتب رسالتك هنا..."></textarea>
-          <button class="submit-btn">إرسال الرسالة</button>
-        </div>
+        <form class="contact-form" id="mainContactForm">
+          <input type="text" id="senderName" class="form-field" placeholder="الاسم الكامل" required>
+          <input type="email" id="senderEmail" class="form-field" placeholder="البريد الإلكتروني" required>
+          <input type="tel" id="senderPhone" class="form-field" placeholder="رقم الهاتف" required>
+          <textarea id="senderMessage" class="form-field" placeholder="اكتب رسالتك هنا..." required></textarea>
+          <button type="submit" class="submit-btn">إرسال الرسالة</button>
+        </form>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>جميع الحقوق محفوظة © <span id="yr"></span> — شركة العطيفى
-للنقل و التوريدات</p>
+    <p>جميع الحقوق محفوظة © <span id="yr"></span> — شركة العطيفى للنقل و التوريدات</p>
   </footer>
 
 </main>
+
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
 
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
@@ -596,6 +585,8 @@ sections.forEach(s=>{if(window.scrollY>=s.offsetTop-200)cur=s.id});
 links.forEach(l=>{l.classList.remove('active');if(l.getAttribute('href')==='#'+cur)l.classList.add('active')});
 });
 </script>
+
+<script src="app.js"></script>
 
 </body>
 </html>
